@@ -1,0 +1,7 @@
+{
+	"imports": {
+		"#lib/": "../src/lib/",
+		"#core/": "../src/core/",
+		"#module/": "../src/modules"
+	}
+}
