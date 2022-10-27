@@ -9,6 +9,8 @@ import executeCommand from '#lib/executeCommand.ts';
 client.on("ready", () => {
 	console.clear();
 	client.interactions.commands.bulkEdit(app.commands.array());	
+
+	console.info("ready");
 })
 
 
