@@ -9,13 +9,14 @@ const directory: string = path.resolve(
 );
 
 
-import { ImportDirectory } from "https://esm.sh/@zoodogood/import-directory@1.3.0";
+import { ImportDirectory } from "https://esm.sh/@zoodogood/import-directory@1.3.3";
 
 async function importCommands(){
 	const commands: Array<[string, BaseCommand]> = (await new ImportDirectory()
 		.import(directory))
 		.map(({Command}) => new Command())
 		.map((command: BaseCommand) => [command.name, command]);
+	
 
 	const collection = new Collection(commands);
 	return collection;
